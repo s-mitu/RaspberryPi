@@ -39,9 +39,6 @@ int main(int argc, char *argv[])
 		printf("%d OK\n", i);
 		float temp = (((cmdbuff[0] << 8) | cmdbuff[1]) >> 3) / 16.0f;
 		printf("Temp: %g \n", temp);
-		for (i = 0; i < sizeof (cmdbuff); i++) {
-			printf("%d: %0x \n", i, cmdbuff[i]);
-		}
 	}
 	close(fd);
 	return 0;

@@ -1,1 +1,5 @@
- RaspberryPi のFreeBSD関連の資料やら。
+RaspberryPi のFreeBSD関連の資料やら。
+Documents 発表スライドなど
+i2c-temp i2c で温度センサーADT7410 とお話するプログラム(i2c アドレスは 0x48固定)。
+i2c-accel i2c で加速度センサーBMC050とお話するプログラム(i2c アドレスは0x18固定)。
+flatchecker i2c コマンドでBMC050とお話して水平判定するシェルスクリプト。

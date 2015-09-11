@@ -1,0 +1,4 @@
+Sample of device communication with i2c 
+Temp sensor
+Chip: Analog Devices ADT7410
+	http://www.analog.com/en/products/analog-to-digital-converters/integrated-special-purpose-converters/integrated-temperature-sensors/adt7410.html

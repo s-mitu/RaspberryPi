@@ -1,4 +1,5 @@
 ○はじめに
+
 秋月電子の i2c キャラクター液晶をFreeBSDのRaspberryPiで表示
 するシェルスクリプトです。
 
@@ -12,16 +13,25 @@ https://github.com/vzaigrin/newi2c
 ことを前提としています。
 
 ○使い方
+
 i2c-lcd.sh [-bulk] [-w num]  format [arguments]
+
 i2c-lcd.sh -c
+
+オプション
+
         -w
                 折り返しのための液晶の文字幅(default:8)
+
         -b
              	全画面クリアしてから書き込み   
+
         -u
                 上の行のみクリアして書き込み
+
         -l
                 下の行のみクリアして書き込み
+
         -c
 				画面クリア
 

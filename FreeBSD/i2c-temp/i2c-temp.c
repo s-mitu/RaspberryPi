@@ -35,10 +35,8 @@ int main(int argc, char *argv[])
 	if (ioctl(fd, I2CRDWR, &cmd) == -1) {
 		fprintf(stderr, "%d Error %s\n", __LINE__, strerror(errno));
 	} else {
-		int i ;
-		printf("%d OK\n", i);
 		float temp = (((cmdbuff[0] << 8) | cmdbuff[1]) >> 3) / 16.0f;
-		printf("Temp: %g \n", temp);
+		printf("%02x %02x %02x %02x Temp: %g \n", cmdbuff[0], cmdbuff[1], cmdbuff[2], cmdbuff[3], temp);
 	}
 	close(fd);
 	return 0;

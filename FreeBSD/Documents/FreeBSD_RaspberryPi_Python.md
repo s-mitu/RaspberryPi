@@ -43,4 +43,33 @@
  * python setup.py install
 
 --- 
+
+## 使い方
+* README.rst のサンプルが微妙に違うので注意
+
+---
+## 他のライブラリと組み合わせ
+* WebAPIをFlas(khttp://flask.pocoo.org)で実装
+ * HTTPでGPIOが叩けるようになる
+
+* Webから操作出来るリモコンを作ってみよう
+
+---
+## 用意したハードウェア
+* Raspberry Pi
+* Pimoroni Explorer Hat Pro(https://shop.pimoroni.com/products/explorer-hat)
+ * Proじゃないとモーター制御がない
+* タミヤの工作キット（トラック＆ホイールセット　ギアボックス）
+ * モーター一つで前進後退のみ
+* オマケで距離センサー（I2C）
+---
+## ハードウェア制御
+* モーター制御
+ * GPIOで操作（https://github.com/pimoroni/explorer-hat/blob/master/documentation/Technical-reference.md)
+
+
+
+---
+
+## 実演
 <img src="images/tank.jpg"/>

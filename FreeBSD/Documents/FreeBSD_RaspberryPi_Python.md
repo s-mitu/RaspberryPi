@@ -1,12 +1,13 @@
-# Python で GPIO 操作
+## Python で GPIO 操作
 
 鈴木光宏(@s_mitu)
 
 ---
 
 ## 自己紹介
+## <img width="100" src="images/icon.png"/>
 
-* 鈴木光宏(@s_mitu)
+* 鈴木光宏(@s_mitu) 
  * なんちゃって組み込み系(i386系 CPU でFreeBSD/Linux 入れて動く機械を作る)
  * 最近は arm 系も(Linuxですが)
  * マヌルネコとダム画像ばかり流れてくる twitter アカウント @s_mitu
@@ -25,9 +26,21 @@
 ## GPIO 操作用 Python + FreeBSD ライブラリ
 
 * freebsd-gpio https://github.com/gonzoua/freebsd-gpio
- * 下の方がメンテがアクティブですよと勧められる
+ * FreeBSD wiki (https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi) からリンク
+ * Perl/Ruby/Python のライブラリ
+ * Pythonライブラリは下の方がメンテがアクティブですよと勧められる
 * fbsd_gpio_py https://github.com/evadot/fbsd_gpio_py
  * 今回はこちらを利用
 
---- 
+---
 
+## インストール
+* まず cffi を pkg でインストール
+ * pkg install py27-cffi
+* setup.pyでインストール
+ * README.rst では pip でインストールとなっているが途中でコケる
+ * python setup.py build
+ * python setup.py install
+
+--- 
+<img src="images/tank.jpg"/>

@@ -37,10 +37,11 @@
 ## インストール
 * まず cffi を pkg でインストール
  * pkg install py27-cffi
-* setup.pyでインストール
- * README.rst では pip でインストールとなっているが途中でコケる
- * python setup.py build
- * python setup.py install
+* ソースを取ってくる git clone https://github.com/evadot/fbsd_gpio_py.git
+ * README.rst に従い pip でインストール
+ * コケる
+ * コンパイラとかが /nxb-bin/usr/bin/cc とか見ちゃってる
+ * 環境変数でも切り替わらず /nxb-bin を作るという強行手段でインストール
 
 --- 
 

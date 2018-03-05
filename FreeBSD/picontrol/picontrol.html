@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>BSD tank コントロール</title>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	function onClickFront() {
+		$.ajax({url:"/front",
+				success: function() {
+					$("#idNowStatus").text("前進")}});
+	}
+	function onClickBack() {
+		$.ajax({url:"/back",
+				success: function() {
+					$("#idNowStatus").text("後進")}});
+	}
+	function onClickStop() {
+		$.ajax({url:"/stop",
+				success: function() {
+					$("#idNowStatus").text("停止")}});
+	}
+</script>
+</head>
+<body>
+<h1></h1>
+<button id="idFront" onClick="onClickFront()">前進</button>
+<button id="idBack" onClick="onClickBack()">後進</button>
+<button id="idStop" onClick="onClickStop()">停止</button>
+<div id="idStatusArea">
+Control Status:<div id="idNowStatus">停止</div>
+</div>
+</body>
+</html>

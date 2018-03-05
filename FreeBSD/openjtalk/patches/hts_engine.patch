@@ -1,0 +1,31 @@
+Only in hts_engine_API-1.09.mod/bin: .deps
+Only in hts_engine_API-1.09.mod/bin: hts_engine
+Only in hts_engine_API-1.09.mod/bin: hts_engine.o
+Only in hts_engine_API-1.09.mod/bin: Makefile
+Only in hts_engine_API-1.09.mod/: config.log
+Only in hts_engine_API-1.09.mod/: config.status
+Only in hts_engine_API-1.09.mod/lib: .deps
+Only in hts_engine_API-1.09.mod/lib: HTS_audio.o
+Only in hts_engine_API-1.09.mod/lib: HTS_engine.o
+Only in hts_engine_API-1.09.mod/lib: HTS_gstream.o
+Only in hts_engine_API-1.09.mod/lib: HTS_label.o
+diff -ru hts_engine_API-1.09/lib/HTS_misc.c hts_engine_API-1.09.mod/lib/HTS_misc.c
+--- hts_engine_API-1.09/lib/HTS_misc.c	2015-05-03 01:54:28.989769000 +0900
++++ hts_engine_API-1.09.mod/lib/HTS_misc.c	2015-05-03 01:54:28.928675000 +0900
+@@ -245,7 +245,7 @@
+    } else if (fp->type == HTS_FILE) {
+       fpos_t pos;
+       fgetpos((FILE *) fp->pointer, &pos);
+-#if defined(_WIN32) || defined(__CYGWIN__) || defined(__APPLE__) || defined(__ANDROID__)
++#if defined(__FreeBSD__) || defined(_WIN32) || defined(__CYGWIN__) || defined(__APPLE__) || defined(__ANDROID__)
+       return (size_t) pos;
+ #else
+       return (size_t) pos.__pos;
+Only in hts_engine_API-1.09.mod/lib: HTS_misc.o
+Only in hts_engine_API-1.09.mod/lib: HTS_model.o
+Only in hts_engine_API-1.09.mod/lib: HTS_pstream.o
+Only in hts_engine_API-1.09.mod/lib: HTS_sstream.o
+Only in hts_engine_API-1.09.mod/lib: HTS_vocoder.o
+Only in hts_engine_API-1.09.mod/lib: libHTSEngine.a
+Only in hts_engine_API-1.09.mod/lib: Makefile
+Only in hts_engine_API-1.09.mod/: Makefile

@@ -33,15 +33,6 @@ def controllpage():
 	except IOError:
 		return "準備不足でした。"
 
-@app.route("/wallpaler")
-def wallpaper():
-        try:
-            return open("freebsd_wallpaper_by_nohup.jpg", "r").read()
-	except IOError:
-		return ""
-
-
-
 #@app.route("/start")
 
 # 前進
@@ -52,6 +43,8 @@ def motorFront():
 	pin3.high()
 	pin4.low()
 	led2.low()
+	now = datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
+	#subprocess.Popen(["/usr/local/tankannounce/tankannounce.py", now + " 前進中"])
 	return "OK"
 
 # 後進
@@ -62,6 +55,8 @@ def motorBack():
 	pin3.low()
 	pin4.high()
 	led2.low()
+	now = datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
+	#subprocess.Popen(["/usr/local/tankannounce/tankannounce.py", now + " 後退中"])
 	return "OK"
 
 # 超信地旋回R
@@ -74,6 +69,7 @@ def motorPivotTurnR():
 	led2.low()
 	now = datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
 	subprocess.Popen(["/usr/local/tankannounce/tankannounce.py", now + " 右回転中"])
+	motorStop()
 	return "OK"
 
 # 超信地旋回l
@@ -86,11 +82,14 @@ def motorPivotTurnL():
 	led2.low()
 	now = datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
 	subprocess.Popen(["/usr/local/tankannounce/tankannounce.py", now + " 左回転中"])
+	motorStop()
 	return "OK"
 
 # 
 @app.route("/swing")
 def motorSwing():
+	now = datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
+	#subprocess.Popen(["/usr/local/tankannounce/tankannounce.py", now + " スイング中"])
 	for i in range(5):
 		motorFront()
 		sleep(1)
@@ -109,7 +108,12 @@ def motorStop():
 	led.high()
 	led2.high()
 	now = datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
-	subprocess.Popen(["/usr/local/tankannounce/tankannounce.py", now + " 停止"])
+	#subprocess.Popen(["/usr/local/tankannounce/tankannounce.py", now + " 停止"])
+	return "OK"
+
+@app.route("/shake")
+def shake():
+	subprocess.Popen(["/usr/local/bin/shake.sh"])
 	return "OK"
 
 # 距離取得

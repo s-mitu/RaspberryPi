@@ -2,43 +2,38 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>BSD tank control</title>
+<title>BSD tank コントロール</title>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript">
-	function onClickShake() {
-		$.ajax({url:"/shake",
-				success: function() {
-					}});
-	}
 	function onClickFront() {
 		$.ajax({url:"/front",
 				success: function() {
-					$("#idNowStatus").text("Go front")}});
+					$("#idNowStatus").text("前進")}});
 	}
 	function onClickBack() {
 		$.ajax({url:"/back",
 				success: function() {
-					$("#idNowStatus").text("Go back")}});
+					$("#idNowStatus").text("後進")}});
 	}
 	function onClickStop() {
 		$.ajax({url:"/stop",
 				success: function() {
-					$("#idNowStatus").text("Stop")}});
+					$("#idNowStatus").text("停止")}});
 	}
 	function onClickPivotTurnR() {
 		$.ajax({url:"/pivotturn_r",
 				success: function() {
-					$("#idNowStatus").text("Super rotation(R)")}});
+					$("#idNowStatus").text("超信地旋回(R)")}});
 	}
 	function onClickPivotTurnL() {
 		$.ajax({url:"/pivotturn_l",
 				success: function() {
-					$("#idNowStatus").text("Super rotation(L)")}});
+					$("#idNowStatus").text("超信地旋回(L)")}});
 	}
 	function onClickSwing() {
 		$.ajax({url:"/swing",
 				success: function() {
-					$("#idNowStatus").text("Stop")}});
+					$("#idNowStatus").text("停止")}});
 	}
 	function updateDistance() {
 		$.ajax({url:"/distance.json",
@@ -55,14 +50,14 @@
 </head>
 <body>
 <h1></h1>
-<button id="idShake" onClick="onClickShake()">Shake the Flag</button>
-<!-- <button id="idFront" onClick="onClickFront()">Go front</button> -->
-<!-- <button id="idBack" onClick="onClickBack()">Go back</button> -->
-<button id="idPivotTurnR" onClick="onClickPivotTurnR()">super rotation(R)</button>
-<button id="idPivotTurnL" onClick="onClickPivotTurnL()">super rotation (L)</button>
-<button id="idStop" onClick="onClickStop()">stop</button>
+<button id="idFront" onClick="onClickFront()">前進</button>
+<button id="idBack" onClick="onClickBack()">後進</button>
+<button id="idPivotTurnR" onClick="onClickPivotTurnR()">超信地旋回(R)</button>
+<button id="idPivotTurnL" onClick="onClickPivotTurnL()">超信地旋回(L)</button>
+<button id="idSwing" onClick="onClickSwing()">スイング</button>
+<button id="idStop" onClick="onClickStop()">停止</button>
 <div id="idStatusArea">
-Control Status:<div id="idNowStatus">stop</div>
+Control Status:<div id="idNowStatus">停止</div>
 Distance: <div id="idDist"></div> [cm]
 </div>
 </body>

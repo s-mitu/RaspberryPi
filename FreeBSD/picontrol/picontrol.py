@@ -33,6 +33,15 @@ def controllpage():
 	except IOError:
 		return "準備不足でした。"
 
+@app.route("/wallpaler")
+def wallpaper():
+        try:
+            return open("freebsd_wallpaper_by_nohup.jpg", "r").read()
+	except IOError:
+		return ""
+
+
+
 #@app.route("/start")
 
 # 前進

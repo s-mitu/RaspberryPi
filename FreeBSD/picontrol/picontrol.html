@@ -40,17 +40,17 @@
 				success: function() {
 					$("#idNowStatus").text("Stop")}});
 	}
-	function updateDistance() {
-		$.ajax({url:"/distance.json",
-				datatype: "json",
-				success: function(json) {
-					$("#idDist").text(json.dist);
-				}});
-	}
-	$(function () {
-		updateDistance();
-		setInterval("updateDistance()", 2000);
-	});
+//	function updateDistance() {
+//		$.ajax({url:"/distance.json",
+//				datatype: "json",
+//				success: function(json) {
+//					$("#idDist").text(json.dist);
+//				}});
+//	}
+//	$(function () {
+//		updateDistance();
+//		setInterval("updateDistance()", 2000);
+//	});
 </script>
 </head>
 <body>
@@ -63,7 +63,14 @@
 <button id="idStop" onClick="onClickStop()">stop</button>
 <div id="idStatusArea">
 Control Status:<div id="idNowStatus">stop</div>
-Distance: <div id="idDist"></div> [cm]
+<!-- Distance: <div id="idDist"></div> [cm]
+</div> -->
+<div style="text-align:right;">
+<a class="twitter-timeline" data-width="300" data-height="500" data-theme="dark"
+ href="https://twitter.com/freebsdtank?ref_src=twsrc%5Etfw">Tweets by freebsdtan
+k</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8
+"></script>
 </div>
+
 </body>
 </html>

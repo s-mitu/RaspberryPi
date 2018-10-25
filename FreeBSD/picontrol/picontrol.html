@@ -65,5 +65,17 @@
 Control Status:<div id="idNowStatus">stop</div>
 Distance: <div id="idDist"></div> [cm]
 </div>
+<div id="idCameraArea">
+        <script>
+			function reloadimg(){
+				myimg.src = "a.jpg?r=" + Math.random();
+			}
+			function setreload(timer){
+				setTimeout('reloadimg()',timer);
+			}
+		</script>
+		<img name="myimg" src="a.jpg" onload="setreload(1000)" onerror="setreload(5000)"
+ />
+</div>
 </body>
 </html>

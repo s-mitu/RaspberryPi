@@ -22,7 +22,7 @@ pin2.output = True
 led.output = True
 
 # start distance subprocess
-subprocess.Popen(['/usr/local/bin/distance_loop', '18'])
+#subprocess.Popen(['/usr/local/bin/distance_loop', '18'])
 
 app = Flask(__name__)
 
@@ -124,6 +124,13 @@ def distance():
 	fdistance.close()
 
 	return jsonify(dist=ret)
+
+@app.route("/stream.jpg")
+def stream_image():
+	try:
+		return open('/tmp/image.jpg', "r").read()
+	except IOError:
+		return ""
 
 led.high()
 if __name__ == "__main__":

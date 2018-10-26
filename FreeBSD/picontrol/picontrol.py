@@ -24,7 +24,7 @@ led.output = True
 # start distance subprocess
 #subprocess.Popen(['/usr/local/bin/distance_loop', '18'])
 # start camera subprocess
-subprocess.Popen(['/usr/local/bin/camera_loop.sh', '0.5'])
+subprocess.Popen(['/usr/local/bin/camera-loop.sh', '0.5'])
 
 app = Flask(__name__)
 

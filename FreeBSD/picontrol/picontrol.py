@@ -125,10 +125,10 @@ def distance():
 
 	return jsonify(dist=ret)
 
-@app.route("/stream.jpg")
+@app.route("/camera.jpg")
 def stream_image():
 	try:
-		return open('/tmp/image.jpg', "r").read()
+		return open('/tmp/camera-0.jpg', "r").read()
 	except IOError:
 		return ""
 

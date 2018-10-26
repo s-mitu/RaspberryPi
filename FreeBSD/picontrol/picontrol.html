@@ -65,20 +65,27 @@
 Control Status:<div id="idNowStatus">stop</div>
 <!-- Distance: <div id="idDist"></div> [cm]
 </div> -->
-<div style="text-align:right;">
-<a class="twitter-timeline" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/freebsdtank?ref_src=twsrc%5Etfw">Tweets by freebsdtan k</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8
-"></script>
+<table>
+	<tr>
+		<td>
+<a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/freebsdtank?ref_src=twsrc%5Etfw">Tweets by freebsdtank</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div>
+		</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>
 <div id="idCameraArea">
         <script>
 			function reloadimg(){
-				myimg.src = "a.jpg?r=" + Math.random();
+				camera.src = "camera.jpg?r=" + Math.random();
 			}
 			function setreload(timer){
 				setTimeout('reloadimg()',timer);
 			}
 		</script>
-		<img name="myimg" src="a.jpg" onload="setreload(1000)" onerror="setreload(5000)"/>
+		<img name="camera" width="800" height="600" src="camera.jpg" onload="setreload(1000)" onerror="setreload(5000)"/>
 </div>
+		</td>
+	</tr>
+</table>
 </body>
 </html>

@@ -35,17 +35,17 @@
 				success: function() {
 					$("#idNowStatus").text("停止")}});
 	}
-	function updateDistance() {
-		$.ajax({url:"/distance.json",
-				datatype: "json",
-				success: function(json) {
-					$("#idDist").text(json.dist);
-				}});
-	}
-	$(function () {
-		updateDistance();
-		setInterval("updateDistance()", 2000);
-	});
+#	function updateDistance() {
+#		$.ajax({url:"/distance.json",
+#				datatype: "json",
+#				success: function(json) {
+#					$("#idDist").text(json.dist);
+#				}});
+#	}
+#	$(function () {
+#		updateDistance();
+#		setInterval("updateDistance()", 2000);
+#	});
 </script>
 </head>
 <body>
@@ -60,5 +60,28 @@
 Control Status:<div id="idNowStatus">停止</div>
 Distance: <div id="idDist"></div> [cm]
 </div>
+<hr/>
+<table>
+	<tr>
+		<td>
+<a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/freebsdtank?ref_src=twsrc%5Etfw">Tweets by freebsdtank</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</div>
+		</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>
+<div id="idCameraArea">
+        <script>
+			function reloadimg(){
+				camera.src = "camera.jpg?r=" + Math.random();
+			}
+			function setreload(timer){
+				setTimeout('reloadimg()',timer);
+			}
+		</script>
+		<img name="camera" width="800" height="600" src="camera.jpg" onload="setreload(1000)" onerror="setreload(5000)"/>
+</div>
+		</td>
+	</tr>
+</table>
 </body>
 </html>

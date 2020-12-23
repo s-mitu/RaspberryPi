@@ -1,4 +1,5 @@
 Sample of device communication with i2c 
-Temp sensor
-Chip: Analog Devices ADT7410
-	http://www.analog.com/en/products/analog-to-digital-converters/integrated-special-purpose-converters/integrated-temperature-sensors/adt7410.html
+Distance sensor
+Chip: SHARP GP2Y0E03
+	https://jp.sharp/products/device/lineup/selection/opto/haca/diagram2.html
+	
